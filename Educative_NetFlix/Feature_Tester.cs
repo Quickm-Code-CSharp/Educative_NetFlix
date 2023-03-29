@@ -11,9 +11,11 @@ namespace Educative_NetFlix
         public void Feature_1_Tester()
         {
             Console.WriteLine("Feature 1");
-            Console.WriteLine();
 
             string[] titles = { "duel", "dule", "speed", "spede", "deul", "cars" };
+            var titlesStr = StringArrayPrinter(titles);
+            Console.WriteLine($"Input data: {titlesStr}");
+            Console.WriteLine();
 
             List<List<string>> gt = Features.Feature1(titles);
 
@@ -30,6 +32,21 @@ namespace Educative_NetFlix
                     Console.WriteLine("[{0}]", string.Join(", ", g));
                 }
             }
+        }
+
+        public string StringArrayPrinter(string[] strs)
+        {
+            string result = string.Empty;
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var item in strs)
+            {
+                sb.Append(item + " ");
+            }
+
+            result = sb.ToString();
+
+            return result;
         }
     }
 }
