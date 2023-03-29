@@ -10,6 +10,11 @@ namespace Educative_NetFlix
     {
         static void Main(string[] args)
         {
+            Feature_Tester tester = new Feature_Tester();
+
+            tester.Feature_1_Tester();
+
+            _ = Console.ReadLine();
         }
     }
 }
