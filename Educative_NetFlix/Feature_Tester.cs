@@ -36,7 +36,19 @@ namespace Educative_NetFlix
         public void Feature_02_Tester()
         {
             Console.WriteLine("Feature 02");
-            Console.WriteLine("Not Implemented yet");
+            LinkedListNode a = LinkedList.CreateLinkedList(new int[] { 11, 23, 41, 51 });
+
+            LinkedListNode b = LinkedList.CreateLinkedList(new int[] { 21, 23, 42 });
+
+            LinkedListNode c = LinkedList.CreateLinkedList(new int[] { 25, 56, 66, 72 });
+
+            List<LinkedListNode> list1 = new List<LinkedListNode>();
+            list1.Add(a);
+            list1.Add(b);
+            list1.Add(c);
+
+            Console.WriteLine("All movie ID's from best to worse are:");
+            LinkedList.Display(Features.Feature2(list1));
 
         }
         public void Feature_03_Tester()

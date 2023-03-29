@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Features.cs" />
     <Compile Include="Feature_Tester.cs" />
+    <Compile Include="LinkedList.cs" />
+    <Compile Include="LinkedListNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
