@@ -7,4 +7,4 @@ This repository contains the code for the NetFlix project.  The project has at l
 
 Feature 1: Group similiar titles
 
-Feature 2: Merge multiple list of top ranked movies
+Feature 2: Merge multiple lists of top ranked movies
