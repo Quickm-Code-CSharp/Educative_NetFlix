@@ -8,7 +8,7 @@ namespace Educative_NetFlix
 {
     class Feature_Tester
     {
-        public void Feature_1_Tester()
+        public void Feature_01_Tester()
         {
             Console.WriteLine("Feature 1");
 
@@ -33,8 +33,64 @@ namespace Educative_NetFlix
                 }
             }
         }
+        public void Feature_02_Tester()
+        {
+            Console.WriteLine("Feature 02");
+            Console.WriteLine("Not Implemented yet");
 
-        public string StringArrayPrinter(string[] strs)
+        }
+        public void Feature_03_Tester()
+        {
+            Console.WriteLine("Feature 03");
+            Console.WriteLine("Not Implemented yet");
+        }
+        public void Feature_04_Tester()
+        {
+            Console.WriteLine("Feature 04");
+            Console.WriteLine("Not Implemented yet");
+        }
+        public void Feature_05_Tester()
+        {
+            Console.WriteLine("Feature 05");
+            Console.WriteLine("Not Implemented yet");
+        }
+        public void Feature_06_Tester()
+        {
+            Console.WriteLine("Feature 06");
+            Console.WriteLine("Not Implemented yet");
+        }
+        public void Feature_07_Tester()
+        {
+            Console.WriteLine("Feature 07");
+            Console.WriteLine("Not Implemented yet");
+        }
+        public void Feature_08_Tester()
+        {
+            Console.WriteLine("Feature 08");
+            Console.WriteLine("Not Implemented yet");
+        }
+        public void Feature_09_Tester()
+        {
+            Console.WriteLine("Feature 09");
+            Console.WriteLine("Not Implemented yet");
+        }
+        public void Feature_10_Tester()
+        {
+            Console.WriteLine("Feature 10");
+            Console.WriteLine("Not Implemented yet");
+        }
+        public void Feature_11_Tester()
+        {
+            Console.WriteLine("Feature 11");
+            Console.WriteLine("Not Implemented yet");
+        }
+        public void Feature_12_Tester()
+        {
+            Console.WriteLine("Feature 12");
+            Console.WriteLine("Not Implemented yet");
+        }
+
+        protected string StringArrayPrinter(string[] strs)
         {
             string result = string.Empty;
             StringBuilder sb = new StringBuilder();
