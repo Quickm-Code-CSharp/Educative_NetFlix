@@ -37,10 +37,17 @@ namespace Educative_NetFlix
         {
             Console.WriteLine("Feature 02");
             LinkedListNode a = LinkedList.CreateLinkedList(new int[] { 11, 23, 41, 51 });
+            Console.Write("List A: ");
+            LinkedList.Display(a);
 
             LinkedListNode b = LinkedList.CreateLinkedList(new int[] { 21, 23, 42 });
+            Console.Write("List B: ");
+            LinkedList.Display(b);
 
             LinkedListNode c = LinkedList.CreateLinkedList(new int[] { 25, 56, 66, 72 });
+            Console.Write("List C: ");
+            LinkedList.Display(c);
+            Console.WriteLine();
 
             List<LinkedListNode> list1 = new List<LinkedListNode>();
             list1.Add(a);

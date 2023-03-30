@@ -68,7 +68,7 @@ namespace Educative_NetFlix
             return new LinkedListNode(-1);
         }
 
-        public static LinkedListNode Merge2SortedLists(LinkedListNode list1, LinkedListNode list2)
+        protected static LinkedListNode Merge2SortedLists(LinkedListNode list1, LinkedListNode list2)
         {
             LinkedListNode dummy = new LinkedListNode(-1);
 

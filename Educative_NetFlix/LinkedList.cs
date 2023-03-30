@@ -99,14 +99,14 @@ namespace Educative_NetFlix
 
         public static List<int> ToList(LinkedListNode head)
         {
-            List<int> lst = new List<int>();
-            LinkedListNode temp = head;
-            while (temp != null)
+            List<int>      list = new List<int>();
+            LinkedListNode node = head;
+            while (node != null)
             {
-                lst.Add(temp.data);
-                temp = temp.next;
+                list.Add(node.data);
+                node = node.next;
             }
-            return lst;
+            return list;
         }
 
         public static void Display(LinkedListNode head)
