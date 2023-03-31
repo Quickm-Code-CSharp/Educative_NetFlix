@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Feature1.cs" />
+    <Compile Include="Features\Feature2.cs" />
     <Compile Include="Features\FeatureInvoker.cs" />
     <Compile Include="Feature_Tester.cs" />
     <Compile Include="LinkedList.cs" />
