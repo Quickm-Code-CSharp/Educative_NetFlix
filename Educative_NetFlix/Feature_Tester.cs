@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Educative_NetFlix.Features;
 
 namespace Educative_NetFlix
 {
@@ -17,7 +18,7 @@ namespace Educative_NetFlix
             Console.WriteLine($"Input data: {titlesStr}");
             Console.WriteLine();
 
-            List<List<string>> gt = Features.Feature1(titles);
+            List<List<string>> gt = FeatureInvoker.Feature1(titles);
 
             //string query = "spede";
             string query = "deul";
@@ -55,7 +56,7 @@ namespace Educative_NetFlix
             list1.Add(c);
 
             Console.WriteLine("All movie ID's from best to worse are:");
-            LinkedList.Display(Features.Feature2(list1));
+            LinkedList.Display(FeatureInvoker.Feature2(list1));
 
         }
         public void Feature_03_Tester()
