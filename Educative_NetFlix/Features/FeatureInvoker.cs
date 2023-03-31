@@ -13,10 +13,8 @@ namespace Educative_NetFlix.Features
 
         public static LinkedListNode     Feature2(List<LinkedListNode> lists) => MergeKSortedLists(lists);
 
-
         protected static LinkedListNode MergeKSortedLists(List<LinkedListNode> lists)
         {
-
             if (lists.Count > 0)
             {
                 LinkedListNode res = lists[0];
