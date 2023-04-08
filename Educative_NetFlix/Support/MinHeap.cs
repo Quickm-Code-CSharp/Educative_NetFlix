@@ -6,7 +6,7 @@ class MinHeap<T> : HeapBase<T> where T : IComparable<T>
 {
     public MinHeap()
     {
-        heapDelegate = MinHeapify;
+        heapDelegate += MinHeapify;
     }
 
     public void MinHeapify(int i)

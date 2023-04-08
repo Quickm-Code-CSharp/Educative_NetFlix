@@ -6,7 +6,7 @@ class MaxHeap<T> : HeapBase<T> where T : IComparable<T>
 {
     public MaxHeap() : base()
     {
-        heapDelegate = MaxHeapify;
+        heapDelegate += MaxHeapify;
     }
 
     public void MaxHeapify(int i)
