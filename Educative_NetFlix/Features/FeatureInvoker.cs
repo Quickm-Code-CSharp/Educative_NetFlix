@@ -12,5 +12,13 @@ namespace Educative_NetFlix.Features
         public static List<List<string>> Feature1(string[] strs) => Features.Feature1.GroupTitles(strs);
 
         public static LinkedListNode     Feature2(List<LinkedListNode> lists) => Features.Feature2.MergeKSortedLists(lists);
+
+        public static double Feature3(Feature3 feature, int age)
+        {
+            feature.insertNum(age);
+            var median = feature.findMedian();
+
+            return median;
+        }
     }
 }

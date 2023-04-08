@@ -45,12 +45,15 @@
   <ItemGroup>
     <Compile Include="Features\Feature1.cs" />
     <Compile Include="Features\Feature2.cs" />
+    <Compile Include="Features\Feature3.cs" />
     <Compile Include="Features\FeatureInvoker.cs" />
     <Compile Include="Feature_Tester.cs" />
     <Compile Include="Support\LinkedList.cs" />
     <Compile Include="Support\LinkedListNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\MaxHeap.cs" />
+    <Compile Include="Support\MinHeap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

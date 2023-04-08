@@ -62,7 +62,20 @@ namespace Educative_NetFlix
         public void Feature_03_Tester()
         {
             Console.WriteLine("Feature 03");
-            Console.WriteLine("Not Implemented yet");
+
+            Feature3 medianOfAges = new Feature3();
+            IList<int> ages = new List<int>() { 35, 30,25 };
+
+            medianOfAges.insertNum(22);
+            Console.Write($"Data: 22 ");
+            ages.ToList().ForEach(a => Console.Write($"{a} "));
+            Console.WriteLine();
+
+            foreach (var age in ages)
+            {
+                var median = FeatureInvoker.Feature3(medianOfAges, age);
+                Console.WriteLine("The recommended content will be for ages under: " + median);
+            }
         }
         public void Feature_04_Tester()
         {
