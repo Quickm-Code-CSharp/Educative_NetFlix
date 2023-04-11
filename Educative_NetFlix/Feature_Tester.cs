@@ -80,8 +80,25 @@ namespace Educative_NetFlix
         public void Feature_04_Tester()
         {
             Console.WriteLine("Feature 04");
-            Console.WriteLine("Not Implemented yet");
+            int[][] movieRatings = new int[][]
+            {
+                new int[]{1,2,2,3},
+                new int[]{4,5,6,3,4},
+                new int[]{8,8,7,6,5,4,4,1}
+            };
+
+            foreach (var movieRating in movieRatings)
+            {
+                System.Console.Write("Movie rating data: ");
+
+                movieRating.ToList().ForEach(rating => Console.Write($"{rating} "));
+                bool valid = FeatureInvoker.Feature4(movieRating);
+
+                string msg = (valid) ? "Title Identified and Separated" : "Title Score Fluctuating";
+                System.Console.WriteLine(msg);
+            }
         }
+
         public void Feature_05_Tester()
         {
             Console.WriteLine("Feature 05");

@@ -20,5 +20,7 @@ namespace Educative_NetFlix.Features
 
             return median;
         }
+
+        public static bool Feature4(int[] ratings) => Features.Feature4.IdentifyTitles(ratings);
     }
 }

@@ -21,8 +21,8 @@ namespace Educative_NetFlix
             tester.Feature_03_Tester();
             Console.WriteLine();
 
-            //tester.Feature_04_Tester();
-            //Console.WriteLine();
+            tester.Feature_04_Tester();
+            Console.WriteLine();
 
             //tester.Feature_05_Tester();
             //Console.WriteLine();
