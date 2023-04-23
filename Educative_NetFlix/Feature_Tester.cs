@@ -18,7 +18,7 @@ namespace Educative_NetFlix
             Console.WriteLine($"Input data: {titlesStr}");
             Console.WriteLine();
 
-            List<List<string>> gt = FeatureInvoker.Feature1(titles);
+            List<List<string>> gt = FeatureInvoker. Feature1(titles);
 
             //string query = "spede";
             string query = "deul";
@@ -102,7 +102,23 @@ namespace Educative_NetFlix
         public void Feature_05_Tester()
         {
             Console.WriteLine("Feature 05");
-            Console.WriteLine("Not Implemented yet");
+            int      capacity = 3;
+            Feature5 cache    = new Feature5(capacity);
+
+            System.Console.WriteLine("The most recently watched titles are: (key, value)");
+            List<KeyValuePair<int, int> > recentlyWatchedList = new List<KeyValuePair<int, int>>();
+
+            recentlyWatchedList.Add(new KeyValuePair<int, int>(10, 20));
+            recentlyWatchedList.Add(new KeyValuePair<int, int>(15, 25));
+            recentlyWatchedList.Add(new KeyValuePair<int, int>(20, 30));
+            recentlyWatchedList.Add(new KeyValuePair<int, int>(25, 35));
+            recentlyWatchedList.Add(new KeyValuePair<int, int>(05, 40));
+            recentlyWatchedList.Add(new KeyValuePair<int, int>(25, 00));
+
+            foreach (var kvp in recentlyWatchedList)
+            {
+                FeatureInvoker.Feature5(cache, kvp);
+            }
         }
         public void Feature_06_Tester()
         {

@@ -47,8 +47,11 @@
     <Compile Include="Features\Feature2.cs" />
     <Compile Include="Features\Feature3.cs" />
     <Compile Include="Features\Feature4.cs" />
+    <Compile Include="Features\Feature5.cs" />
     <Compile Include="Features\FeatureInvoker.cs" />
     <Compile Include="Feature_Tester.cs" />
+    <Compile Include="Support\DoubleLinkedList.cs" />
+    <Compile Include="Support\DoubleLinkedListNode.cs" />
     <Compile Include="Support\HeapBase.cs" />
     <Compile Include="Support\LinkedList.cs" />
     <Compile Include="Support\LinkedListNode.cs" />

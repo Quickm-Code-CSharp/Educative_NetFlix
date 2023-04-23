@@ -11,7 +11,7 @@ namespace Educative_NetFlix
         public int key;
         public int data;
         public LinkedListNode next;
-        public LinkedListNode arbitraryPointer;
+        //public LinkedListNode arbitraryPointer;
 
         public LinkedListNode(int data)
         {
@@ -32,11 +32,11 @@ namespace Educative_NetFlix
             this.next = next;
         }
 
-        public LinkedListNode(int data, LinkedListNode next, LinkedListNode arbitraryPointer)
-        {
-            this.data = data;
-            this.next = next;
-            this.arbitraryPointer = arbitraryPointer;
-        }
+        //public LinkedListNode(int data, LinkedListNode next, LinkedListNode arbitraryPointer)
+        //{
+        //    this.data = data;
+        //    this.next = next;
+        //    this.arbitraryPointer = arbitraryPointer;
+        //}
     }
 }

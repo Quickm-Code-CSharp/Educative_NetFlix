@@ -22,5 +22,20 @@ namespace Educative_NetFlix.Features
         }
 
         public static bool Feature4(int[] ratings) => Features.Feature4.IdentifyTitles(ratings);
+
+        public static void Feature5(Feature5 feature, KeyValuePair<int, int> kvp)
+        {
+            if (kvp.Value != 0)
+            {
+                feature.Set(kvp.Key, kvp.Value);
+            }
+
+            else
+            {
+                feature.Get(kvp.Key);
+            }
+
+            feature.Print();
+        }
     }
 }
