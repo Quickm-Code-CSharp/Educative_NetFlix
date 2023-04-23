@@ -29,9 +29,9 @@ namespace Educative_NetFlix.Features
             else
             {
                 int value = cache[key].data;
-                cacheVals.removeNode(cache[key]);
-                cacheVals.insertAtTail(key, value);
-                return cacheVals.getTail();
+                cacheVals.RemoveNode(cache[key]);
+                cacheVals.InsertAtTail(key, value);
+                return cacheVals.Tail;
             }
         }
 
@@ -40,14 +40,14 @@ namespace Educative_NetFlix.Features
             if (!cache.ContainsKey(key))
             {
                 EvictIfNeeded();
-                cacheVals.insertAtTail(key, value);
-                cache[key] = cacheVals.getTail();
+                cacheVals.InsertAtTail(key, value);
+                cache[key] = cacheVals.Tail;
             }
             else
             {
-                cacheVals.removeNode(cache[key]);
-                cacheVals.insertAtTail(key, value);
-                cache[key] = cacheVals.getTail();
+                cacheVals.RemoveNode(cache[key]);
+                cacheVals.InsertAtTail(key, value);
+                cache[key] = cacheVals.Tail;
             }
         }
 
@@ -55,7 +55,7 @@ namespace Educative_NetFlix.Features
         {
             if (cacheVals.size >= capacity)
             {
-                DoubleLinkedListNode node = cacheVals.removeHead();
+                DoubleLinkedListNode node = cacheVals.RemoveHead();
                 cache.Remove(node.key);
             }
         }

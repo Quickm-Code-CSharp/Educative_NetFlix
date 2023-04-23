@@ -15,8 +15,8 @@ namespace Educative_NetFlix.Features
 
         public static double Feature3(Feature3 feature, int age)
         {
-            feature.insertNum(age);
-            var median = feature.findMedian();
+            feature.InsertNum(age);
+            var median = feature.FindMedian();
 
             return median;
         }

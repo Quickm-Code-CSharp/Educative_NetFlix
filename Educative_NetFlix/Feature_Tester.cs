@@ -50,10 +50,12 @@ namespace Educative_NetFlix
             LinkedList.Display(c);
             Console.WriteLine();
 
-            List<LinkedListNode> list1 = new List<LinkedListNode>();
-            list1.Add(a);
-            list1.Add(b);
-            list1.Add(c);
+            List<LinkedListNode> list1 = new List<LinkedListNode>
+            {
+                a,
+                b,
+                c
+            };
 
             Console.WriteLine("All movie ID's from best to worse are:");
             LinkedList.Display(FeatureInvoker.Feature2(list1));
@@ -66,7 +68,7 @@ namespace Educative_NetFlix
             Feature3 medianOfAges = new Feature3();
             IList<int> ages = new List<int>() { 35, 30,25 };
 
-            medianOfAges.insertNum(22);
+            medianOfAges.InsertNum(22);
             Console.Write($"Data: 22 ");
             ages.ToList().ForEach(a => Console.Write($"{a} "));
             Console.WriteLine();
@@ -106,14 +108,15 @@ namespace Educative_NetFlix
             Feature5 cache    = new Feature5(capacity);
 
             System.Console.WriteLine("The most recently watched titles are: (key, value)");
-            List<KeyValuePair<int, int> > recentlyWatchedList = new List<KeyValuePair<int, int>>();
-
-            recentlyWatchedList.Add(new KeyValuePair<int, int>(10, 20));
-            recentlyWatchedList.Add(new KeyValuePair<int, int>(15, 25));
-            recentlyWatchedList.Add(new KeyValuePair<int, int>(20, 30));
-            recentlyWatchedList.Add(new KeyValuePair<int, int>(25, 35));
-            recentlyWatchedList.Add(new KeyValuePair<int, int>(05, 40));
-            recentlyWatchedList.Add(new KeyValuePair<int, int>(25, 00));
+            List<KeyValuePair<int, int>> recentlyWatchedList = new List<KeyValuePair<int, int>>
+            {
+                new KeyValuePair<int, int>(10, 20),
+                new KeyValuePair<int, int>(15, 25),
+                new KeyValuePair<int, int>(20, 30),
+                new KeyValuePair<int, int>(25, 35),
+                new KeyValuePair<int, int>(05, 40),
+                new KeyValuePair<int, int>(25, 00)
+            };
 
             foreach (var kvp in recentlyWatchedList)
             {
@@ -158,7 +161,6 @@ namespace Educative_NetFlix
 
         protected string StringArrayPrinter(string[] strs)
         {
-            string result = string.Empty;
             StringBuilder sb = new StringBuilder();
 
             foreach (var item in strs)
@@ -166,7 +168,7 @@ namespace Educative_NetFlix
                 sb.Append(item + " ");
             }
 
-            result = sb.ToString();
+            string result = sb.ToString();
 
             return result;
         }

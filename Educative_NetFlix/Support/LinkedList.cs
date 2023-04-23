@@ -10,8 +10,7 @@ namespace Educative_NetFlix
     {
         public static LinkedListNode InsertAtHead(LinkedListNode head, int data)
         {
-            LinkedListNode newNode = new LinkedListNode(data);
-            newNode.next = head;
+            LinkedListNode newNode = new LinkedListNode(data, head);
             return newNode;
         }
 

@@ -8,8 +8,8 @@ namespace Educative_NetFlix.Features
 {
     class Feature3
     {
-        MaxHeap<int> maxHeap; //containing first half of numbers
-        MinHeap<int> minHeap; //containing second half of numbers
+        private MaxHeap<int> maxHeap; //containing first half of numbers
+        private MinHeap<int> minHeap; //containing second half of numbers
 
         public Feature3()
         {
@@ -17,7 +17,7 @@ namespace Educative_NetFlix.Features
             minHeap = new MinHeap<int>();
         }
 
-        public void insertNum(int num)
+        public void InsertNum(int num)
         {
             if (maxHeap.Size() == 0 || maxHeap.Peek() >= num)
             {
@@ -43,7 +43,7 @@ namespace Educative_NetFlix.Features
             }
         }
 
-        public double findMedian()
+        public double FindMedian()
         {
             if (maxHeap.Size() == minHeap.Size())
             {

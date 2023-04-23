@@ -10,8 +10,6 @@ namespace Educative_NetFlix.Features
     {
         public static bool IdentifyTitles(int[] scores)
         {
-            bool valid = true;
-
             bool increasing = true;
             bool decreasing = true;
 
@@ -23,7 +21,7 @@ namespace Educative_NetFlix.Features
                     decreasing = false;
             }
 
-            valid = increasing || decreasing;
+            bool valid = increasing || decreasing;
 
             return valid;
         }

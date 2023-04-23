@@ -19,7 +19,7 @@ namespace Educative_NetFlix.Support
             this.size = 0;
         }
 
-        public void insertAtHead(int key, int data)
+        public void InsertAtHead(int key, int data)
         {
             DoubleLinkedListNode newNode = new DoubleLinkedListNode(key, data);
             if (this.head == null)
@@ -36,7 +36,7 @@ namespace Educative_NetFlix.Support
             this.size++;
         }
 
-        public void insertAtTail(int key, int data)
+        public void InsertAtTail(int key, int data)
         {
             DoubleLinkedListNode newNode = new DoubleLinkedListNode(key, data);
             if (this.tail == null)
@@ -57,67 +57,54 @@ namespace Educative_NetFlix.Support
             this.size++;
         }
 
-        public DoubleLinkedListNode getHead()
+        public DoubleLinkedListNode Head => this.head;
+
+        public DoubleLinkedListNode Tail => this.tail;
+
+        public DoubleLinkedListNode RemoveNode(DoubleLinkedListNode node)
         {
-            return this.head;
-        }
-
-        public DoubleLinkedListNode getTail()
-        {
-            return this.tail;
-        }
-
-        public DoubleLinkedListNode removeNode(DoubleLinkedListNode node)
-        {
-            if (node == null)
+            if (node != null)
             {
-                return null;
-            }
+                if (node.prev != null)
+                {
+                    node.prev.next = node.next;
+                }
 
-            if (node.prev != null)
-            {
-                node.prev.next = node.next;
-            }
+                if (node.next != null)
+                {
+                    node.next.prev = node.prev;
+                }
 
-            if (node.next != null)
-            {
-                node.next.prev = node.prev;
+                if (node == this.head)
+                {
+                    this.head = this.head.next;
+                }
+                if (node == this.tail)
+                {
+                    this.tail = this.tail.prev;
+                }
+                this.size--;
+                //return node;
             }
-
-            if (node == this.head)
-            {
-                this.head = this.head.next;
-            }
-            if (node == this.tail)
-            {
-                this.tail = this.tail.prev;
-            }
-            this.size--;
             return node;
         }
 
-        public void remove(int data)
+        public void Remove(int data)
         {
-            DoubleLinkedListNode i = this.getHead();
+            DoubleLinkedListNode i = this.Head;
             while (i != null)
             {
                 if (i.data == data)
                 {
-                    this.removeNode(i);
+                    this.RemoveNode(i);
                 }
                 i = i.next;
             }
         }
 
-        public DoubleLinkedListNode removeHead()
-        {
-            return this.removeNode(this.head);
-        }
+        public DoubleLinkedListNode RemoveHead() => this.RemoveNode(this.head);
 
-        public DoubleLinkedListNode removeTail()
-        {
-            return this.removeNode(this.tail);
-        }
+        public DoubleLinkedListNode RemoveTail() => this.RemoveNode(this.tail);
 
     }
 }

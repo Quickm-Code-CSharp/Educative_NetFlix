@@ -51,6 +51,7 @@
     <Compile Include="Features\FeatureInvoker.cs" />
     <Compile Include="Feature_Tester.cs" />
     <Compile Include="Support\DoubleLinkedList.cs" />
+    <Compile Include="Support\DoubleLinkedListFreq.cs" />
     <Compile Include="Support\DoubleLinkedListNode.cs" />
     <Compile Include="Support\HeapBase.cs" />
     <Compile Include="Support\LinkedList.cs" />
