@@ -50,13 +50,13 @@
     <Compile Include="Features\Feature5.cs" />
     <Compile Include="Features\FeatureInvoker.cs" />
     <Compile Include="Feature_Tester.cs" />
-    <Compile Include="Support\DoubleLinkedList.cs" />
-    <Compile Include="Support\DoubleLinkedListFreqNode.cs" />
-    <Compile Include="Support\DoubleLinkedListNode.cs" />
+    <Compile Include="Support\LinkedList\DoubleLinkedList.cs" />
+    <Compile Include="Support\LinkedList\DoubleLinkedListFreqNode.cs" />
+    <Compile Include="Support\LinkedList\DoubleLinkedListNode.cs" />
     <Compile Include="Support\HeapBase.cs" />
-    <Compile Include="Support\IDoubleLinkedListNode.cs" />
-    <Compile Include="Support\LinkedList.cs" />
-    <Compile Include="Support\LinkedListNode.cs" />
+    <Compile Include="Support\LinkedList\IDoubleLinkedListNode.cs" />
+    <Compile Include="Support\LinkedList\LinkedList.cs" />
+    <Compile Include="Support\LinkedList\LinkedListNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Support\MaxHeap.cs" />
@@ -68,5 +68,6 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
