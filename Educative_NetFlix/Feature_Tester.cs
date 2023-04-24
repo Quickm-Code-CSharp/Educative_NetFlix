@@ -126,7 +126,49 @@ namespace Educative_NetFlix
         public void Feature_06_Tester()
         {
             Console.WriteLine("Feature 06");
-            Console.WriteLine("Not Implemented yet");
+
+            int capacity = 2;
+            Feature6 cache = new Feature6(capacity);
+            Console.WriteLine("The most frequently watched titles are: (key, value)");
+
+            List<KeyValuePair<int, int>> recentlyWatchedList = new List<KeyValuePair<int, int>>
+            {
+                new KeyValuePair<int, int>(1, 1),
+                new KeyValuePair<int, int>(2, 2),
+                new KeyValuePair<int, int>(1, 0),
+                new KeyValuePair<int, int>(3, 3),
+                new KeyValuePair<int, int>(2, 0),
+                new KeyValuePair<int, int>(4, 4),
+                new KeyValuePair<int, int>(1, 0),
+                new KeyValuePair<int, int>(3, 0),
+                new KeyValuePair<int, int>(4, 0),
+
+            };
+
+            foreach (var kvp in recentlyWatchedList)
+            {
+                FeatureInvoker.Feature6(cache, kvp);
+            }
+
+
+
+            //cache.Set(1, 1);
+            //cache.Set(2, 2);
+            //cache.print();
+            //cache.Get(1);
+            //cache.Set(3, 3);
+            //cache.print();
+            //cache.Get(2);
+            //cache.Set(4, 4);
+
+            //cache.Get(1);
+            //cache.Get(3);
+            //cache.Get(4);
+            //cache.print();
+
+
+
+
         }
         public void Feature_07_Tester()
         {

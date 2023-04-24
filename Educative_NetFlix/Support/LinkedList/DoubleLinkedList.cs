@@ -36,6 +36,13 @@ namespace Educative_NetFlix.Support
             this.size++;
         }
 
+        public void InsertAtHead(TNode node)
+        {
+            var detailNode = node as DoubleLinkedListNode;
+            InsertAtTail(detailNode.key, detailNode.data);
+        }
+
+
         public void InsertAtTail(int key, int data)
         {
             DoubleLinkedListNode newNode = new DoubleLinkedListNode(key, data);
@@ -55,6 +62,12 @@ namespace Educative_NetFlix.Support
                 newNode.next = null;
             }
             this.size++;
+        }
+
+        public void InsertAtTail(TNode node)
+        {
+            var detailNode = node as DoubleLinkedListNode;
+            InsertAtTail(detailNode.key, detailNode.data);
         }
 
         public DoubleLinkedListNode Head => this.head;

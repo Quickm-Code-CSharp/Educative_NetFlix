@@ -37,5 +37,25 @@ namespace Educative_NetFlix.Features
 
             feature.Print();
         }
+
+        public static void Feature6(Feature6 feature, KeyValuePair<int, int> kvp)
+        {
+            if (kvp.Value != 0)
+            {
+                feature.Set(kvp.Key, kvp.Value);
+            }
+
+            else
+            {
+                feature.Get(kvp.Key);
+            }
+
+            if ((kvp.Key == 2 && kvp.Value == 2) ||
+                (kvp.Key == 3 && kvp.Value == 3) ||
+                (kvp.Key == 4 && kvp.Value == 0))
+            {
+                feature.Print();
+            }
+        }
     }
 }

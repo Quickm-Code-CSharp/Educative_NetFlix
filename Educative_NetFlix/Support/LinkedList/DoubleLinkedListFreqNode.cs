@@ -8,7 +8,7 @@ namespace Educative_NetFlix.Support
 {
     class DoubleLinkedListFreqNode : DoubleLinkedListNode
     {
-        int freq;
+        public int freq;
 
         public DoubleLinkedListFreqNode(int data) : base(data)
         {
