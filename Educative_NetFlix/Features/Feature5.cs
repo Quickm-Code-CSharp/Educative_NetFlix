@@ -11,13 +11,13 @@ namespace Educative_NetFlix.Features
     {
         int capacity;
         Dictionary<int, DoubleLinkedListNode> cache;
-        DoubleLinkedList cacheVals;
+        DoubleLinkedList<DoubleLinkedListNode> cacheVals;
 
         public Feature5(int capacity)
         {
             this.capacity = capacity;
             cache = new Dictionary<int, DoubleLinkedListNode>(capacity);
-            cacheVals = new DoubleLinkedList();
+            cacheVals = new DoubleLinkedList<DoubleLinkedListNode>();
         }
 
         public DoubleLinkedListNode Get(int key)

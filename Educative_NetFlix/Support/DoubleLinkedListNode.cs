@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Educative_NetFlix.Support
 {
-    class DoubleLinkedListNode
+    class DoubleLinkedListNode : IDoubleLinkedListNode
     {
         public int key;
         public int data;
