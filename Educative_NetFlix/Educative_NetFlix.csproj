@@ -50,7 +50,6 @@
     <Compile Include="Features\Feature5.cs" />
     <Compile Include="Features\Feature6.cs" />
     <Compile Include="Features\FeatureInvoker.cs" />
-    <Compile Include="Features\NetflixFeature6.cs" />
     <Compile Include="Feature_Tester.cs" />
     <Compile Include="Support\LinkedList\DoubleLinkedFreqList.cs" />
     <Compile Include="Support\LinkedList\DoubleLinkedList.cs" />
@@ -62,8 +61,6 @@
     <Compile Include="Support\LinkedList\LinkedListNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Support\LinkedList\NetflixDoubleLinkedListNode.cs" />
-    <Compile Include="Support\LinkedList\NetflixLinkedList.cs" />
     <Compile Include="Support\MaxHeap.cs" />
     <Compile Include="Support\MinHeap.cs" />
   </ItemGroup>
