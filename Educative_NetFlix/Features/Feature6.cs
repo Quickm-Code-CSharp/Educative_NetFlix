@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Educative_NetFlix.Support;
+using Educative_NetFlix.Support.LinkedList;
 
 namespace Educative_NetFlix.Features
 {
@@ -14,7 +15,7 @@ namespace Educative_NetFlix.Features
         int minFreq;
         //LinkedListNode holds key and value pairs
         Dictionary<int, DoubleLinkedListFreqNode> keyDict;
-        Dictionary<int, DoubleLinkedList<DoubleLinkedListFreqNode>> freqDict;
+        Dictionary<int, DoubleLinkedFreqList> freqDict;
 
         public Feature6(int capacity)
         {
@@ -22,19 +23,17 @@ namespace Educative_NetFlix.Features
             this.size = 0;
             this.minFreq = 0;
             keyDict = new Dictionary<int, DoubleLinkedListFreqNode>(capacity);
-            freqDict = new Dictionary<int, DoubleLinkedList<DoubleLinkedListFreqNode>>(capacity);
+            freqDict = new Dictionary<int, DoubleLinkedFreqList>(capacity);
         }
 
         public DoubleLinkedListFreqNode Get(int key)
         {
-            Console.WriteLine($"Key Dictionary Get: Key: {key}");
-
             if (!keyDict.ContainsKey(key))
             { 
                 return null;
             }
             DoubleLinkedListFreqNode temp = this.keyDict[key];
-            this.freqDict[temp.freq].RemoveNode(temp);
+            this.freqDict[temp.freq].DeleteNode(temp);
             if (this.freqDict[this.keyDict[key].freq] == null)
             {
                 this.freqDict.Remove(this.keyDict[key].freq);
@@ -46,27 +45,24 @@ namespace Educative_NetFlix.Features
             this.keyDict[key].freq += 1;
             if (!this.freqDict.ContainsKey(this.keyDict[key].freq))
             {
-                this.freqDict[this.keyDict[key].freq] = new DoubleLinkedList<DoubleLinkedListFreqNode>();
+                this.freqDict[this.keyDict[key].freq] = new DoubleLinkedFreqList();
             }
 
-            this.freqDict[this.keyDict[key].freq].InsertAtTail(this.keyDict[key]);
+            this.freqDict[this.keyDict[key].freq].AppendNode(this.keyDict[key]);
             return this.keyDict[key];
         }
 
         public void Set(int key, int value)
         {
-            Console.WriteLine($"Key Dictionary Set: Key: {key} Data: {value}");
             if (this.Get(key) != null)
             {
-                Console.WriteLine($"Key Dictionary Update: Key exists.");
                 this.keyDict[key].data = value;
                 return;
             }
             if (this.size == this.capacity)
             {
-                Console.WriteLine($"Key Dictionary Update: Capacity reached");
                 this.keyDict.Remove(this.freqDict[this.minFreq].head.key);
-                this.freqDict[this.minFreq].RemoveNode(this.freqDict[this.minFreq].head);
+                this.freqDict[this.minFreq].DeleteNode(this.freqDict[this.minFreq].head);
                 if (this.freqDict[this.minFreq] == null)
                 {
                     this.freqDict.Remove(this.minFreq);
@@ -77,9 +73,9 @@ namespace Educative_NetFlix.Features
             this.keyDict[key] = new DoubleLinkedListFreqNode(key, value, this.minFreq);
             if (!this.freqDict.ContainsKey(this.keyDict[key].freq))
             {
-                this.freqDict[this.keyDict[key].freq] = new DoubleLinkedList<DoubleLinkedListFreqNode>();
+                this.freqDict[this.keyDict[key].freq] = new DoubleLinkedFreqList();
             }
-            this.freqDict[this.keyDict[key].freq].InsertAtTail(this.keyDict[key]);
+            this.freqDict[this.keyDict[key].freq].AppendNode(this.keyDict[key]);
             this.size++;
         }
 
@@ -91,6 +87,5 @@ namespace Educative_NetFlix.Features
             }
             Console.WriteLine("");
         }
-
     }
 }

@@ -52,6 +52,7 @@
     <Compile Include="Features\FeatureInvoker.cs" />
     <Compile Include="Features\NetflixFeature6.cs" />
     <Compile Include="Feature_Tester.cs" />
+    <Compile Include="Support\LinkedList\DoubleLinkedFreqList.cs" />
     <Compile Include="Support\LinkedList\DoubleLinkedList.cs" />
     <Compile Include="Support\LinkedList\DoubleLinkedListFreqNode.cs" />
     <Compile Include="Support\LinkedList\DoubleLinkedListNode.cs" />

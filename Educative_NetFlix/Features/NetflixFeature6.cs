@@ -15,7 +15,7 @@ namespace Educative_NetFlix.Features
         int minFreq;
         //LinkedListNode holds key and value pairs
         Dictionary<int, DoubleLinkedListFreqNode> keyDict;
-        Dictionary<int, NetflixDoubleLinkedList> freqDict;
+        Dictionary<int, DoubleLinkedFreqList> freqDict;
 
         public LFUCache(int capacity)
         {
@@ -23,7 +23,7 @@ namespace Educative_NetFlix.Features
             this.size = 0;
             this.minFreq = 0;
             keyDict = new Dictionary<int, DoubleLinkedListFreqNode>(capacity);
-            freqDict = new Dictionary<int, NetflixDoubleLinkedList>(capacity);
+            freqDict = new Dictionary<int, DoubleLinkedFreqList>(capacity);
         }
 
         public DoubleLinkedListFreqNode Get(int key)
@@ -45,7 +45,7 @@ namespace Educative_NetFlix.Features
             this.keyDict[key].freq += 1;
             if (!this.freqDict.ContainsKey(this.keyDict[key].freq))
             {
-                this.freqDict[this.keyDict[key].freq] = new NetflixDoubleLinkedList();
+                this.freqDict[this.keyDict[key].freq] = new DoubleLinkedFreqList();
             }
             this.freqDict[this.keyDict[key].freq].AppendNode(this.keyDict[key]);
             return this.keyDict[key];
@@ -72,7 +72,7 @@ namespace Educative_NetFlix.Features
             this.keyDict[key] = new DoubleLinkedListFreqNode(key, value, this.minFreq);
             if (!this.freqDict.ContainsKey(this.keyDict[key].freq))
             {
-                this.freqDict[this.keyDict[key].freq] = new NetflixDoubleLinkedList();
+                this.freqDict[this.keyDict[key].freq] = new DoubleLinkedFreqList();
             }
             this.freqDict[this.keyDict[key].freq].AppendNode(this.keyDict[key]);
             this.size++;
