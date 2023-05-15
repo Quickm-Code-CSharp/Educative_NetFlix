@@ -24,15 +24,14 @@ namespace Educative_NetFlix.Support
             DoubleLinkedListNode newNode = new DoubleLinkedListNode(key, data);
             if (this.head == null)
             {
-                this.head = newNode;
                 this.tail = newNode;
             }
             else
             {
                 newNode.next = this.head;
                 this.head.prev = newNode;
-                this.head = newNode;
             }
+            this.head = newNode;
             this.size++;
         }
 
@@ -48,19 +47,19 @@ namespace Educative_NetFlix.Support
             DoubleLinkedListNode newNode = new DoubleLinkedListNode(key, data);
             if (this.tail == null)
             {
-                this.tail = newNode;
                 this.head = newNode;
-                newNode.next = null;
                 newNode.prev = null;
+                newNode.next = null;
             }
 
             else
             {
                 this.tail.next = newNode;
                 newNode.prev = this.tail;
-                this.tail = newNode;
                 newNode.next = null;
             }
+
+            this.tail = newNode;
             this.size++;
         }
 
