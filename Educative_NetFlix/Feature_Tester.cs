@@ -128,7 +128,7 @@ namespace Educative_NetFlix
             Console.WriteLine("Feature 06");
 
             int capacity = 2;
-            Feature6 cache = new Feature6(capacity);
+            //Feature6 cache = new Feature6(capacity);
             LFUCache lfuCache = new LFUCache(capacity);
             Console.WriteLine("The most frequently watched titles are: (key, value)");
 
@@ -147,7 +147,7 @@ namespace Educative_NetFlix
 
             foreach (var kvp in recentlyWatchedList)
             {
-                FeatureInvoker.Feature6(cache, kvp);
+                //FeatureInvoker.Feature6(cache, kvp);
             }
 
             Console.WriteLine("Netflix: The most frequently watched titles are: (key, value)");

@@ -82,20 +82,24 @@ namespace Educative_NetFlix.Support
                 {
                     node.prev.next = node.next;
                 }
+                else
+                {
+                    this.head = node.next;
+                }
+
 
                 if (node.next != null)
                 {
                     node.next.prev = node.prev;
                 }
+                else
+                {
+                    this.tail = node.prev;
+                }
 
-                if (node == this.head)
-                {
-                    this.head = this.head.next;
-                }
-                if (node == this.tail)
-                {
-                    this.tail = this.tail.prev;
-                }
+                node.next = null;
+                node.prev = null;
+
                 this.size--;
                 //return node;
             }
