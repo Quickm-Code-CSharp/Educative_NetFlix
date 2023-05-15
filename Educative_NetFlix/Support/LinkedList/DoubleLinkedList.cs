@@ -39,7 +39,7 @@ namespace Educative_NetFlix.Support
         public void InsertAtHead(TNode node)
         {
             var detailNode = node as DoubleLinkedListNode;
-            InsertAtTail(detailNode.key, detailNode.data);
+            InsertAtHead(detailNode.key, detailNode.data);
         }
 
 
