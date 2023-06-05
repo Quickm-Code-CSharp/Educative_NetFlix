@@ -10,7 +10,7 @@ namespace Educative_NetFlix.Features
     class Feature5
     {
         int capacity;
-        Dictionary<int, DoubleLinkedListNode> cache;
+        Dictionary<int, DoubleLinkedListNode>  cache;
         DoubleLinkedList<DoubleLinkedListNode> cacheVals;
 
         public Feature5(int capacity)
@@ -30,25 +30,29 @@ namespace Educative_NetFlix.Features
             {
                 int value = cache[key].data;
                 cacheVals.RemoveNode(cache[key]);
-                cacheVals.InsertAtTail(key, value);
+
+                var node = new DoubleLinkedListNode(key, value);
+                cacheVals.AppendNode(node);
+                //cacheVals.Append(key, value);
                 return cacheVals.Tail;
             }
         }
 
         public void Set(int key, int value)
         {
-            if (!cache.ContainsKey(key))
+            if (cache.ContainsKey(key))
             {
-                EvictIfNeeded();
-                cacheVals.InsertAtTail(key, value);
-                cache[key] = cacheVals.Tail;
+                cacheVals.RemoveNode(cache[key]);
             }
             else
             {
-                cacheVals.RemoveNode(cache[key]);
-                cacheVals.InsertAtTail(key, value);
-                cache[key] = cacheVals.Tail;
+                EvictIfNeeded();
             }
+
+            var node = new DoubleLinkedListNode(key, value); 
+            cacheVals.AppendNode(node);
+            cache[key] = cacheVals.Tail;
+
         }
 
         private void EvictIfNeeded()

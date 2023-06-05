@@ -19,7 +19,7 @@ namespace Educative_NetFlix.Support
             this.size = 0;
         }
 
-        public void InsertAtHead(int key, int data)
+        protected void Prepend(int key, int data) 
         {
             DoubleLinkedListNode newNode = new DoubleLinkedListNode(key, data);
             if (this.head == null)
@@ -35,14 +35,14 @@ namespace Educative_NetFlix.Support
             this.size++;
         }
 
-        public void InsertAtHead(TNode node)
+        public void PrependNode(TNode node)
         {
             var detailNode = node as DoubleLinkedListNode;
-            InsertAtHead(detailNode.key, detailNode.data);
+            Prepend(detailNode.key, detailNode.data);
         }
 
 
-        public void InsertAtTail(int key, int data)
+        protected void Append(int key, int data)
         {
             DoubleLinkedListNode newNode = new DoubleLinkedListNode(key, data);
             if (this.tail == null)
@@ -63,10 +63,10 @@ namespace Educative_NetFlix.Support
             this.size++;
         }
 
-        public void InsertAtTail(TNode node)
+        public void AppendNode(TNode node)
         {
             var detailNode = node as DoubleLinkedListNode;
-            InsertAtTail(detailNode.key, detailNode.data);
+            Append(detailNode.key, detailNode.data);
         }
 
         public DoubleLinkedListNode Head => this.head;
