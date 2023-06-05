@@ -149,10 +149,25 @@ namespace Educative_NetFlix
                 FeatureInvoker.Feature6(cache, kvp);
             }
         }
+
         public void Feature_07_Tester()
         {
             Console.WriteLine("Feature 07");
-            Console.WriteLine("Not Implemented yet");
+
+            Feature7 feature = new Feature7();
+
+            List<int> ratingsList = new List<int> { 5, 0, 2, 4, 6, 3, 10 };
+            foreach (var rating in ratingsList)
+            {
+                FeatureInvoker.Feature7(feature, rating);
+                Console.WriteLine("Maximum Rating: " + feature.MaxRating());
+            }
+
+            feature.Pop();
+
+            Console.WriteLine();
+            Console.WriteLine("After clicking back button");
+            Console.WriteLine("Maximum Rating: " + feature.MaxRating());
         }
         public void Feature_08_Tester()
         {

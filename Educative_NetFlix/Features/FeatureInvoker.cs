@@ -57,5 +57,10 @@ namespace Educative_NetFlix.Features
                 feature.Print();
             }
         }
+
+        public static void Feature7(Feature7 feature, int rating)
+        {
+            feature.Push(rating);
+        }
     }
 }
