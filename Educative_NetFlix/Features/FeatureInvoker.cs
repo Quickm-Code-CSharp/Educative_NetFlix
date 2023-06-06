@@ -62,5 +62,19 @@ namespace Educative_NetFlix.Features
         {
             feature.Push(rating);
         }
+
+        public static void Feature8(Feature8 feature, int[] pushData, int[] popData)
+        {
+            bool valid = feature.VerifyStacks(pushData, popData);
+
+            ReportVerification(valid);
+        }
+
+        private static void ReportVerification(bool verifyResult)
+        {
+            string msg = (verifyResult) ? "Session Successfull!" : "Session Faulty!";
+            Console.WriteLine(msg);
+
+        }
     }
 }

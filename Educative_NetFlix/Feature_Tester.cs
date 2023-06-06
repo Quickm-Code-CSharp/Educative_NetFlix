@@ -172,7 +172,27 @@ namespace Educative_NetFlix
         public void Feature_08_Tester()
         {
             Console.WriteLine("Feature 08");
-            Console.WriteLine("Not Implemented yet");
+
+            Feature8 feature = new Feature8();
+            
+            // Driver code
+            // Positive case
+            int[] pushOp = { 1, 2, 3, 4, 5 };
+            int[] popOp = { 5, 4, 3, 2, 1 };
+
+            FeatureInvoker.Feature8(feature, pushOp, popOp);
+            Console.WriteLine();
+
+            // Negative case
+            int[] pushOp2 = { 6, 7, 8, 9, 10 };
+            int[] popOp2 = { 8, 10, 7, 9 };
+
+            FeatureInvoker.Feature8(feature, pushOp2, popOp2);
+
+
+
+
+
         }
         public void Feature_09_Tester()
         {
