@@ -189,15 +189,29 @@ namespace Educative_NetFlix
 
             FeatureInvoker.Feature8(feature, pushOp2, popOp2);
 
-
-
-
-
         }
         public void Feature_09_Tester()
         {
             Console.WriteLine("Feature 09");
-            Console.WriteLine("Not Implemented yet");
+
+            Feature9 feature = new Feature9();
+
+            // Example 1
+            string[] categories = new string[1] { "Action" };
+            FeatureInvoker.Feature9(feature, categories, "Example 1");
+
+            // Example 2
+            categories = new string[2] { "Family", "Action" };
+            FeatureInvoker.Feature9(feature, categories, "Example 2");
+
+            // Example 3
+            categories = new string[2] { "Horror", "Comedy" };
+            FeatureInvoker.Feature9(feature, categories, "Example 3");
+
+            // Example 4
+            categories = new string[4] { "Horror", "Fantasy", "Comedy", "Family" };
+            FeatureInvoker.Feature9(feature, categories, "Example 4");
+
         }
         public void Feature_10_Tester()
         {

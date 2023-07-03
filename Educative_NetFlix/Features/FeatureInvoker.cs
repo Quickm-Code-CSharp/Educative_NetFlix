@@ -70,6 +70,13 @@ namespace Educative_NetFlix.Features
             ReportVerification(valid);
         }
 
+        public static void Feature9(Feature9 feature, string[] categories,string runTitle)
+        {
+            List<string> combinations = feature.LetterCombinations(categories);
+
+            feature.PrintOutput(categories, combinations, runTitle);
+        }
+
         private static void ReportVerification(bool verifyResult)
         {
             string msg = (verifyResult) ? "Session Successfull!" : "Session Faulty!";
