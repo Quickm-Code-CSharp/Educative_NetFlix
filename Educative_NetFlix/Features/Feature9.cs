@@ -65,7 +65,7 @@ namespace Educative_NetFlix.Features
             Console.WriteLine($"{Environment.NewLine}{runTitle}: ");
 
             // categories
-            string categoriesStr = string.Join(" ", categories);
+            string categoriesStr = string.Join(", ", categories);
 
             Console.WriteLine($"Categories: {categoriesStr}");
 
