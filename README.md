@@ -8,3 +8,23 @@ This repository contains the code for the NetFlix project.  The project has at l
 Feature 1: Group similiar titles
 
 Feature 2: Merge multiple lists of top ranked movies
+
+Feature 3: Find median age
+
+Feature 4: Popularity Analysis
+
+Feature 5: Fetch most recently watched movies
+
+Feature 6: Fetch most frequently watch movies
+
+Feature 7: Browse ratings
+
+Feature 8: Verify user session
+
+Feature 9: Movie combinations of a genre
+
+Feature 10: Calculate median of buffering events
+
+Feature 11: Generate movie viewing order
+
+Feature 12: Maintain continue watching bar
