@@ -22,9 +22,3 @@ Feature 7: Browse ratings
 Feature 8: Verify user session
 
 Feature 9: Movie combinations of a genre
-
-Feature 10: Calculate median of buffering events
-
-Feature 11: Generate movie viewing order
-
-Feature 12: Maintain continue watching bar
