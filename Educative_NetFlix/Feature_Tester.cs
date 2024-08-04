@@ -194,7 +194,17 @@ namespace Educative_NetFlix
         {
             Console.WriteLine("Feature 09");
 
-            Feature9 feature = new Feature9();
+            Dictionary<string, string[]> movies = new Dictionary<string, string[]>
+            {
+                { "Family", new string[3]{"Frozen","Kung fu Panda", "Ice Age"} },
+                { "Action", new string[3]{"Iron Man","Wonder Woman","Avengers"}},
+                { "Fantasy", new string[3]{"Jumangi", "Lion King", "Tarzan"}},
+                { "Comedy", new string[4]{"Coco", "The Croods", "Vivi","Pets"}},
+                { "Horror", new string[4]{"Oculus", "Sinister","Insidious","Annebelle"}},
+            };
+
+
+            Feature9 feature = new Feature9(movies);
 
             // Example 1
             string[] categories = new string[1] { "Action" };

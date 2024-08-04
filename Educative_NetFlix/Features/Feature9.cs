@@ -8,15 +8,14 @@ namespace Educative_NetFlix.Features
 {
     class Feature9
     {
-        private List<String> combinations = new List<String>();
+        private readonly List<String> combinations = new List<String>();
         // Mapping the categories to their corresponding movies
-        private Dictionary<string, string[]> movies = new Dictionary<string, string[]>{
-            { "Family", new string[3]{"Frozen","Kung fu Panda", "Ice Age"} },
-            { "Action", new string[3]{"Iron Man","Wonder Woman","Avengers"}},
-            { "Fantasy", new string[3]{"Jumangi", "Lion King", "Tarzan"}},
-            { "Comedy", new string[4]{"Coco", "The Croods", "Vivi","Pets"}},
-            { "Horror", new string[4]{"Oculus", "Sinister","Insidious","Annebelle"}},
-        };
+        private Dictionary<string, string[]> movies = null;
+
+        public Feature9(Dictionary<string, string[]> movies)
+        {
+            this.movies = movies;
+        }
 
         public List<String> LetterCombinations(string[] categories)
         {
